@@ -3,7 +3,7 @@ module "eks" {
   cluster_name    = var.cluster_name
   cluster_version = var.cluster_version
   vpc_id          = aws_vpc.eks_vpc.id
-  subnet_ids      = concat(aws_subnet.public_subnet[*].id, aws_subnet.private_subnet[*].id)
+  subnet_ids      = concat(aws_subnet.public_subnet[*].id, aws_subnet.private_subnet[*].id, aws_subnet.public_2_subnet[*].id, aws_subnet.private_2_subnet[*].id)
 
   eks_managed_node_groups = {
     green = {
