@@ -16,7 +16,24 @@ variable "public_cidr_block" {
   type = string
 }
 
+variable "private_2_cidr_block" {
+  type = string
+}
+
+variable "public_2_cidr_block" {
+  type = string
+}
+
+
 variable "availability_zone" {
+  type = string
+}
+
+variable "availability_2_zone" {
+  type = string
+}
+
+variable "availability_3_zone" {
   type = string
 }
 
